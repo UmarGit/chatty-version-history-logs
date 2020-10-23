@@ -745,7 +745,7 @@ export default {
         .list({
           to: userNumber,
           from: this.myNumber,
-          limit: Number(9999999999),
+          limit: Number(99999999),
         })
         .then((message) =>
           message.map((m) => {
@@ -763,7 +763,7 @@ export default {
             .list({
               to: this.myNumber,
               from: userNumber,
-              limit: Number(9999999999),
+              limit: Number(99999999),
             })
             .then((message) =>
               message.map((m) => {
@@ -794,7 +794,7 @@ export default {
         .list({
           to: userNumber,
           from: this.myNumber,
-          limit: Number(9999999999),
+          limit: Number(99999999),
         })
         .then((message) =>
           message.map((m) => {
@@ -812,7 +812,7 @@ export default {
             .list({
               to: this.myNumber,
               from: userNumber,
-              limit: Number(9999999999),
+              limit: Number(99999999),
             })
             .then((message) =>
               message.map((m) => {
@@ -993,7 +993,7 @@ export default {
         .list({
           to: this.userNumber,
           from: this.myNumber,
-          limit: Number(9999999999),
+          limit: Number(99999999),
         })
         .then((message) =>
           message.map((m) => {
@@ -1011,7 +1011,7 @@ export default {
             .list({
               to: this.myNumber,
               from: this.userNumber,
-              limit: Number(9999999999),
+              limit: Number(99999999),
               number: m.from,
             })
             .then((message) =>
@@ -1068,7 +1068,7 @@ export default {
       client.messages
         .list({
           to: this.myNumber,
-          limit: Number(9999999999),
+          limit: Number(99999999),
         })
         .then((message) =>
           message.map((m) => {
@@ -1086,7 +1086,7 @@ export default {
           client.messages
             .list({
               from: this.myNumber,
-              limit: Number(9999999999),
+              limit: Number(99999999),
             })
             .then((message) =>
               message.map((m) => {
@@ -1106,6 +1106,7 @@ export default {
   mounted() {
     this.updateCredentials();
     this.fetchData();
+    console.log("Chatty initialized with Twilio !");
   },
 };
 </script>
